@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - challenges</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+.challenge-btn{
+    display: block !important;
+    margin-left: 1.2rem;
+}
+.answer-img {
+            display: none; /* Initially hide the image */
+            width: 100%;
+            /* max-width: 380px; */
+        }
+    
+</style>
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+    <p style="text-align: center; font-size: 1.7rem; font-weight: bold; margin-bottom: 0;">Challenges</p>
+
+    <main style="display: flex; width: 70%; margin: auto; justify-content: center;">
+        <section id="activity1" style="display: flex; flex-direction: column; align-items: center;">
+            <h2>Activity 3</h2>
+            <p style="font-size: 1.2rem;">Print a checkerboard pattern using a for or while loop.</p>
+            <img src="./images/checkboard.png" class="" id="" alt="as">
+            <button class="show-answer-btn" id="show-answer-btn">Show Code</button>
+            <img src="./images/image10.png" class="answer-img" id="answer-img" alt="Checkerboard Pattern example">
+        </section>
+        <section id="activity2" style="display: flex; flex-direction: column; align-items: center;">
+            <h2>Activity 2</h2>
+            <p style="font-size: 1.2rem;">Write a program to take a number as input from the user and print the sum of its digits using a while-loop.</p>
+            <button class="show-answer-btn" id="show-answer-btn2">Show Code</button>
+            <img src="./images/image11.png" class="answer-img" id="answer-img2" alt="Checkerboard Pattern example">
+            
+        </section>
+        
+    
+    </main>
+    
+    
+    <button class="goback" onclick="window.location.href='index.html'">Go Back</button>
+    <script>
+        document.getElementById('show-answer-btn').addEventListener('click', function() {
+            var img = document.getElementById('answer-img');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                this.textContent = 'Hide Code';
+            } else {
+                img.style.display = 'none';
+                this.textContent = 'Show Code';
+            }
+        });
+        document.getElementById('show-answer-btn2').addEventListener('click', function() {
+            var img = document.getElementById('answer-img2');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                this.textContent = 'Hide Code';
+            } else {
+                img.style.display = 'none';
+                this.textContent = 'Show Code';
+            }
+        });
+    </script>
+</body>
+</html>
